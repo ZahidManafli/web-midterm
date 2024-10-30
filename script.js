@@ -223,11 +223,6 @@ function divide(){
 
 // subtruction
 function subtruction(){
-    // if(result.innerText[0] == " - "){
-    //     symbol = " - "
-    //     writeTextIntoElement(" - ")
-    //     return
-    // }
     if(!result.innerText.includes(" - ") && !checkSymbol() && result.innerText != ''){
         if(symbol==''){
             symbol = " - "
