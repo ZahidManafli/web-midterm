@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <div class="top-of-calculator">
+                <div class="condition"></div>
+                <div class="result-container">
+                    <p class="symbol">=</p>
+                    <h2 class="result">0</h2>
+                </div>
+            </div>
+            <div class="bottom-of-calculator">
+                <div onclick="writeTextIntoElement('')" class="button">C</div>
+                <div onclick="divide()" class="button">/</div>
+                <div onclick=" percent()" class="button">%</div>
+                <div onclick="multiplication()" class="button">x</div>
+                <div onclick="writeTextIntoElement('7')" class="button number">7</div>
+                <div onclick="writeTextIntoElement('8')" class="button number">8</div>
+                <div onclick="writeTextIntoElement('9')" class="button number">9</div>
+                <div onclick="changeSign()" class="button">±</div>
+                <div onclick="writeTextIntoElement('4')" class="button number">4</div>
+                <div onclick="writeTextIntoElement('5')" class="button number">5</div>
+                <div onclick="writeTextIntoElement('6')" class="button number">6</div>
+                <div onclick="subtruction()" class="button">-</div>
+                <div onclick="writeTextIntoElement('1')" class="button number">1</div>
+                <div onclick="writeTextIntoElement('2')" class="button number">2</div>
+                <div onclick="writeTextIntoElement('3')" class="button number">3</div>
+                <div onclick="plus()" class="button">+</div>
+                <div onclick="writePointToResult()" class="button">.</div>
+                <div onclick="writeTextIntoElement('0')" class="button number">0</div>
+                <div onclick="backspace()" class="button">←</div>
+                <div onclick="equal()" class="button">=</div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
