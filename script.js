@@ -64,7 +64,10 @@ function backspace(){
     // next we split it into characters and get array
     temp = temp.split('')
     // next we change value of list item of array to empty
-    if(temp[temp.length - 1] == symbol){
+    // console.log(temp[temp.length - 1])
+    // console.log(symbol)
+    if(temp[temp.length - 1].trim() == symbol.trim()){
+        console.log(symbol)
         symbol=''
     }
     temp[temp.length - 1] = ''
@@ -283,7 +286,10 @@ function equal(){
 
 // percent
 function percent(){
-    result.innerText = (Number(result.innerText)/100).toFixed(2)
+    console.log(symbol)
+    if(symbol == ''){
+        result.innerText = (Number(result.innerText)/100).toFixed(2)
+    }
 }
 
 // change sign
