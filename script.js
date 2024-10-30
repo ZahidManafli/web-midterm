@@ -189,6 +189,7 @@ function plus(){
         let answer = Number(temp[0]) + Number(temp[1])
         condition.innerText = `${temp[0]} + ${temp[1]}`
         result.innerText = String(answer) + " + "
+        flag=false
     }
 }
 
@@ -214,6 +215,7 @@ function divide(){
         let answer = Number(temp[0]) / Number(temp[1]).toFixed(2)
         condition.innerText = `${temp[0]} / ${temp[1]}`
         result.innerText = String(answer) + " / "
+        flag=false
     }
 }
 
@@ -247,6 +249,7 @@ function subtruction(){
         let answer = (Number(temp[0]) - Number(temp[1])).toFixed(2)
         condition.innerText = `${temp[0]} - ${temp[1]}`
         result.innerText = String(answer) + " - "
+        flag=false
     }
 }
 
@@ -272,6 +275,7 @@ function multiplication(){
         let answer = (Number(temp[0]) * Number(temp[1])).toFixed(2)
         condition.innerText = `${temp[0]} x ${temp[1]}`
         result.innerText = String(answer) + " x "
+        flag=false
     }
 }
 
