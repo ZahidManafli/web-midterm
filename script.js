@@ -26,7 +26,9 @@ function writeTextIntoElement(text){
         if(temp2[0] === '('){
             temp2.shift()
             temp2.unshift('(')
-            temp2.pop()
+            if(temp2.toString().includes(')')){
+                temp2.pop()
+            }
             temp2.push(text)
             temp2.push(')')
         }else{
