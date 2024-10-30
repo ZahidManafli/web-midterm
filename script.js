@@ -192,7 +192,11 @@ function plus(){
     console.log(temp)
     if(temp.length == 2 && temp[1] != ''){
         let answer = Number(temp[0]) + Number(temp[1])
-        condition.innerText = `${temp[0]} + ${temp[1]}`
+        if(flag){
+            condition.innerText = `${temp[0]} + (${temp[1]})`
+        }else{
+            condition.innerText = `${temp[0]} + ${temp[1]}`
+        }
         result.innerText = String(answer) + " + "
         flag=false
     }
@@ -218,7 +222,11 @@ function divide(){
     temp[1] = temp[1].split(')').toString().replaceAll(',',"")
     if(temp.length == 2 && temp[1] != ''){
         let answer = Number(temp[0]) / Number(temp[1]).toFixed(2)
-        condition.innerText = `${temp[0]} / ${temp[1]}`
+        if(flag){
+            condition.innerText = `${temp[0]} / (${temp[1]})`
+        }else{
+            condition.innerText = `${temp[0]} / ${temp[1]}`
+        }
         result.innerText = String(answer) + " / "
         flag=false
     }
@@ -247,7 +255,11 @@ function subtruction(){
     console.log(temp)
     if(temp.length == 2 && temp[1] != ''){
         let answer = (Number(temp[0]) - Number(temp[1])).toFixed(2)
-        condition.innerText = `${temp[0]} - ${temp[1]}`
+        if(flag){
+            condition.innerText = `${temp[0]} - (${temp[1]})`
+        }else{
+            condition.innerText = `${temp[0]} - ${temp[1]}`
+        }
         result.innerText = String(answer) + " - "
         flag=false
     }
@@ -273,7 +285,11 @@ function multiplication(){
     temp[1] = temp[1].split(')').toString().replaceAll(',',"")
     if(temp.length == 2 && temp[1] != ''){
         let answer = (Number(temp[0]) * Number(temp[1])).toFixed(2)
-        condition.innerText = `${temp[0]} x ${temp[1]}`
+        if(flag){
+            condition.innerText = `${temp[0]} x (${temp[1]})`
+        }else{
+            condition.innerText = `${temp[0]} x ${temp[1]}`
+        }
         result.innerText = String(answer) + " x "
         flag=false
     }
