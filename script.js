@@ -12,49 +12,54 @@ let flag = false
 
 // write a something into result
 function writeTextIntoElement(text){
-    // if text is empty then it is clear all
-    if(text == ''){
-        symbol = ''
-        result.innerText = ''
-        flag = false
-        return;
-    }
-    // check flag
-    if(flag && text !== ''){
-        let temp1 = result.innerText.split(symbol)
-        let temp2 = temp1[1].split('')
-        if(temp2[0] === '('){
-            temp2.shift()
-            temp2.unshift('(')
-            if(temp2.toString().includes(')')){
-                temp2.pop()
-            }
-            temp2.push(text)
-            temp2.push(')')
-        }else{
-            temp2.unshift('(')
-            temp2.push(')')
+    if(result.innerText.split(symbol)[1] == '0' && symbol != '' && text != '.'){
+        // pass
+    }else{
+
+        // if text is empty then it is clear all
+        if(text == ''){
+            symbol = ''
+            result.innerText = ''
+            flag = false
+            return;
         }
-        temp2 = temp2.toString().replaceAll(",","")
-        result.innerText = `${temp1[0]}${symbol}${temp2}`
-        console.log(temp2)
-        return;
-    }
-    
-    if(result.innerText == '0'){
-        if(text !== '.'){
-            if(text.split('').length !=3){
-                result.innerText = text
-                return;
+        // check flag
+        if(flag && text !== ''){
+            let temp1 = result.innerText.split(symbol)
+            let temp2 = temp1[1].split('')
+            if(temp2[0] === '('){
+                temp2.shift()
+                temp2.unshift('(')
+                if(temp2.toString().includes(')')){
+                    temp2.pop()
+                }
+                temp2.push(text)
+                temp2.push(')')
+            }else{
+                temp2.unshift('(')
+                temp2.push(')')
+            }
+            temp2 = temp2.toString().replaceAll(",","")
+            result.innerText = `${temp1[0]}${symbol}${temp2}`
+            console.log(temp2)
+            return;
+        }
+        
+        if(result.innerText == '0'){
+            if(text !== '.'){
+                if(text.split('').length !=3){
+                    result.innerText = text
+                    return;
+                }
             }
         }
+        // else add text next of innerText
+        if(toAddEmpthEndOfResult()){
+            result.innerText += ` ${text}`
+            return
+        }
+            result.innerText += text 
     }
-    // else add text next of innerText
-    if(toAddEmpthEndOfResult()){
-        result.innerText += ` ${text}`
-        return
-    }
-        result.innerText += text 
 }
 
 // backspace 
